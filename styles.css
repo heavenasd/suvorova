@@ -942,3 +942,63 @@ input::placeholder, textarea::placeholder { color: rgba(245,243,238,0.22); }
   .footer-inner { flex-direction: column; align-items: flex-start; gap: 1.2rem; }
   .hero-bottom { flex-direction: column; }
 }
+═══════════════════════════════════════════════════
+   UPDATED CONTACT — SIMPLE BIG TYPOGRAPHY VERSION
+   ═══════════════════════════════════════════════════ */
+
+.contact-options.simple-version {
+  display: flex;
+  flex-direction: column;
+  gap: 2.2rem;
+  max-width: 620px;
+  margin: 0 auto;                    /* centered */
+  padding-top: 1rem;
+}
+
+.big-contact a {
+  font-family: var(--font-display);
+  font-size: clamp(1.55rem, 4.2vw, 2.6rem);
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--white);
+  text-decoration: none;
+  display: block;
+  transition: color 0.35s var(--ease-sharp);
+  position: relative;
+}
+
+.big-contact a:hover {
+  color: var(--forest-sage);
+}
+
+.big-contact span {
+  font-size: clamp(1rem, 2.6vw, 1.35rem);
+  font-weight: 400;
+  color: var(--forest-sage);
+  display: block;
+  margin-top: 0.6rem;
+  letter-spacing: 0.02em;
+}
+
+/* Optional subtle line separator */
+.big-contact:not(:last-child) a::after {
+  content: '';
+  position: absolute;
+  bottom: -1.1rem;
+  left: 0;
+  width: 60px;
+  height: 1px;
+  background: rgba(163,177,138,0.25);
+}
+
+/* Make sure it stays centered and aligned nicely */
+@media (max-width: 860px) {
+  .contact-inner {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+  
+  .contact-options.simple-version {
+    max-width: 100%;
+  }
+}
