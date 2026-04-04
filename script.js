@@ -198,6 +198,8 @@ document.addEventListener('DOMContentLoaded', () => {
       'contact.form.message':    'Повідомлення',
       'contact.form.message_ph': 'Що ти хочеш дослідити?',
       'contact.form.submit':     'Надіслати',
+      'contact.subtext': 'Choose the way that feels most natural to you.<br>I read every message and reply personally.',
+      'contact.subtext': 'Обери спосіб, який тобі найзручніший.<br>Я читаю кожне повідомлення і відповідаю особисто.',
     }
   };
 
