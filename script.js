@@ -337,69 +337,63 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 
-  // ─── 7. SUBTLE CURSOR LINE (desktop only) ────────
-  // Adds a thin trailing cursor for premium feel
-  if (window.matchMedia('(pointer: fine)').matches) {
-    const cursor = document.createElement('div');
-    Object.assign(cursor.style, {
-      position:       'fixed',
-      top:            '0',
-      left:           '0',
-      width:          '4px',
-      height:         '4px',
-      borderRadius:   '50%',
-      background:     '#C8F04A',
-      pointerEvents:  'none',
-      zIndex:         '9999',
-      transform:      'translate(-50%, -50%)',
-      transition:     'transform 0.1s ease, opacity 0.3s ease',
-      mixBlendMode:   'difference',
-      opacity:        '0',
-    });
-    document.body.appendChild(cursor);
+ CSS/* ═══════════════════════════════════════════════════
+   UPDATED CONTACT — SIMPLE BIG TYPOGRAPHY VERSION
+   ═══════════════════════════════════════════════════ */
 
-    let mouseX = -100, mouseY = -100;
-    let curX = -100, curY = -100;
+.contact-options.simple-version {
+  display: flex;
+  flex-direction: column;
+  gap: 2.2rem;
+  max-width: 620px;
+  margin: 0 auto;                    /* centered */
+  padding-top: 1rem;
+}
 
-    document.addEventListener('mousemove', (e) => {
-      mouseX = e.clientX;
-      mouseY = e.clientY;
-      cursor.style.opacity = '1';
-    });
+.big-contact a {
+  font-family: var(--font-display);
+  font-size: clamp(1.55rem, 4.2vw, 2.6rem);
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--white);
+  text-decoration: none;
+  display: block;
+  transition: color 0.35s var(--ease-sharp);
+  position: relative;
+}
 
-    document.addEventListener('mouseleave', () => {
-      cursor.style.opacity = '0';
-    });
+.big-contact a:hover {
+  color: var(--forest-sage);
+}
 
-    // Lerp for smoothness
-    const lerp = (a, b, t) => a + (b - a) * t;
+.big-contact span {
+  font-size: clamp(1rem, 2.6vw, 1.35rem);
+  font-weight: 400;
+  color: var(--forest-sage);
+  display: block;
+  margin-top: 0.6rem;
+  letter-spacing: 0.02em;
+}
 
-    const animateCursor = () => {
-      curX = lerp(curX, mouseX, 0.18);
-      curY = lerp(curY, mouseY, 0.18);
-      cursor.style.left = curX + 'px';
-      cursor.style.top  = curY + 'px';
-      requestAnimationFrame(animateCursor);
-    };
-    animateCursor();
+/* Optional subtle line separator */
+.big-contact:not(:last-child) a::after {
+  content: '';
+  position: absolute;
+  bottom: -1.1rem;
+  left: 0;
+  width: 60px;
+  height: 1px;
+  background: rgba(163,177,138,0.25);
+}
 
-    // Scale up on hoverable elements
-    document.querySelectorAll('a, button, .service-item').forEach(el => {
-      el.addEventListener('mouseenter', () => {
-        Object.assign(cursor.style, {
-          width: '32px', height: '32px',
-          background: 'rgba(10,10,10,0.08)',
-          mixBlendMode: 'normal',
-        });
-      });
-      el.addEventListener('mouseleave', () => {
-        Object.assign(cursor.style, {
-          width: '4px', height: '4px',
-          background: '#C8F04A',
-          mixBlendMode: 'difference',
-        });
-      });
-    });
+/* Make sure it stays centered and aligned nicely */
+@media (max-width: 860px) {
+  .contact-inner {
+    grid-template-columns: 1fr;
+    gap: 4rem;
   }
-
-}); // end DOMContentLoaded
+  
+  .contact-options.simple-version {
+    max-width: 100%;
+  }
+}
