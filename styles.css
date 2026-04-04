@@ -942,10 +942,6 @@ input::placeholder, textarea::placeholder { color: rgba(245,243,238,0.22); }
   .footer-inner { flex-direction: column; align-items: flex-start; gap: 1.2rem; }
   .hero-bottom { flex-direction: column; }
 }
-/* ═══════════════════════════════════════════════════
-   UPDATED CONTACT — SIMPLE BIG TYPOGRAPHY VERSION
-   ═══════════════════════════════════════════════════ */
-
 .contact-options.simple-version {
   display: flex;
   flex-direction: column;
