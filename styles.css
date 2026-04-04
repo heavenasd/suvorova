@@ -259,24 +259,81 @@ a { color: inherit; text-decoration: none; }
   letter-spacing: 0.01em;
 }
 
+/* ── HERO CTA BUTTON — Glass Effect + Elegant Round ── */
 .hero-cta {
   display: inline-flex;
   align-items: center;
-  gap: 0.8rem;
+  justify-content: center;
+  gap: 0.9rem;
   font-family: var(--font-display);
-  font-size: 0.72rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
+  font-size: 0.76rem;
   font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
   color: var(--white);
-  background: var(--forest-mid);
-  padding: 0.95rem 2.2rem;
-  transition: background 0.3s ease, transform 0.3s ease;
-  white-space: nowrap;
+  
+  /* Glassmorphism */
+  background: rgba(88, 129, 87, 0.25);     /* soft sage with transparency */
+  backdrop-filter: blur(12px);             /* glass blur */
+  -webkit-backdrop-filter: blur(12px);
+  
+  border: 1px solid rgba(163, 177, 138, 0.35);   /* subtle glass border */
+  padding: 1.2rem 3rem;
+  border-radius: 60px;                     /* nicely rounded */
+  
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 
+    0 8px 32px -10px rgba(52, 78, 65, 0.4),
+    inset 0 1px 0 rgba(255,255,255,0.15);   /* subtle inner highlight */
+
+  transition: 
+    all 0.45s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-.hero-cta:hover { background: var(--forest-deep); transform: translateY(-2px); }
-.hero-cta::after { content: '→'; font-size: 1rem; }
+/* Hover effect */
+.hero-cta:hover {
+  background: rgba(163, 177, 138, 0.35);   /* brighter sage on hover */
+  border-color: rgba(163, 177, 138, 0.6);
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 
+    0 16px 40px -12px rgba(52, 78, 65, 0.5),
+    inset 0 1px 0 rgba(255,255,255,0.25);
+}
+
+/* Shine / light sweep effect */
+.hero-cta::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -150%;
+  width: 60%;
+  height: 300%;
+  background: linear-gradient(
+    135deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.45) 50%,
+    transparent 70%
+  );
+  transition: left 0.8s ease;
+}
+
+.hero-cta:hover::before {
+  left: 120%;
+}
+
+/* Arrow */
+.hero-cta::after {
+  content: '→';
+  font-size: 1.25rem;
+  line-height: 1;
+  transition: transform 0.4s var(--ease-sharp);
+}
+
+.hero-cta:hover::after {
+  transform: translateX(7px);
+}
 
 .hero-scroll-hint {
   position: absolute;
