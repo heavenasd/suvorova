@@ -401,5 +401,20 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+const premiumBtn = document.querySelector('.premium-side-btn');
+const quickMenu = document.getElementById('quick-menu');
 
+if (premiumBtn && quickMenu) {
+  premiumBtn.addEventListener('click', () => {
+    quickMenu.classList.toggle('open');
+    quickMenu.setAttribute('aria-hidden', String(!quickMenu.classList.contains('open')));
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!quickMenu.contains(e.target) && !premiumBtn.contains(e.target)) {
+      quickMenu.classList.remove('open');
+      quickMenu.setAttribute('aria-hidden', 'true');
+    }
+  });
+}
 }); // end DOMContentLoaded
