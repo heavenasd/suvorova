@@ -100,8 +100,8 @@ document.addEventListener('DOMContentLoaded', () => {
       'about.cta':     'Work with me →',
 
       'work.label':    '03 — What I Do',
-      'work.1.title':  'Strategic Clarity',
-      'work.1.desc':   'Helping you see your situation without distortion — so decisions become obvious instead of agonizing.',
+      'work.1.title':  'Idea, Market, Plan',
+      'work.1.desc':   'Building the Foundation (Idea and Business Plan) Your motivation and vision: why a preschool/club? Market analysis: who are your future clients? The concept of the facility: from unique advantages to philosophy. Business plan basics: budget, payback period, forecasts.',
       'work.2.title':  'Life Architecture',
       'work.2.desc':   'Designing structures that hold your goals: routines, boundaries, and priorities that actually work.',
       'work.3.title':  'Identity Work',
@@ -158,8 +158,8 @@ document.addEventListener('DOMContentLoaded', () => {
       'about.cta':     'Працювати зі мною →',
 
       'work.label':    '03 — Що я роблю',
-      'work.1.title':  'Стратегічна ясність',
-      'work.1.desc':   'Допомагаю побачити ситуацію без викривлень — щоб рішення ставали очевидними, а не виснажливими.',
+      'work.1.title':  'Ідея, ринок, план',
+      'work.1.desc':   'Закладаємо Фундамент (Ідея та Бізнес-план)Твоя мотивація та бачення: чому саме дитячий садок/клуб?Аналіз ринку: хто твої майбутні клієнти?Концепція закладу: від унікальних переваг до філософії.Основи бізнес-плану: кошторис, окупність, прогнози.',
       'work.2.title':  'Архітектура життя',
       'work.2.desc':   'Створення структур, що підтримують твої цілі: рутини, межі та пріоритети, які справді працюють.',
       'work.3.title':  'Робота з ідентичністю',
