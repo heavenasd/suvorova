@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
       'nav.contact':  'Contact',
 
       'hero.eyebrow': 'Strategist · Coach · Creator',
-      'hero.tagline': 'Helping women build lives and careers<br>that are entirely their own.',
+      'hero.tagline': 'I help women build preschools and develop careers in working with children.',
       'hero.cta':     'Discover more',
 
       'about.label':   '02 — About',
@@ -148,7 +148,7 @@ document.addEventListener('DOMContentLoaded', () => {
       'nav.contact':  'Контакт',
 
       'hero.eyebrow': 'Стратег · Коуч · Автор',
-      'hero.tagline': 'Допомагаю жінкам будувати життя та кар\'єру,<br>що є справді їхніми.',
+      'hero.tagline': 'Допомагаю жінкам будувати дитячі садки та кар’єру у сфері роботи з дітьми.',
       'hero.cta':     'Дізнатися більше',
 
       'about.label':   '02 — Про мене',
