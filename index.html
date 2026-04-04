@@ -233,7 +233,7 @@
   </section>
 
   <!-- ─── SECTION 6: CONTACT ─── -->
-  <section class="contact section-pad roll-section" id="contact">
+ <section class="contact section-pad roll-section" id="contact">
     <div class="container contact-inner">
 
       <div class="contact-head reveal">
@@ -242,16 +242,24 @@
         <p data-i18n="contact.subtext">Fill in the form or reach out directly on social media. I read every message.</p>
       </div>
 
-      <form class="contact-form" action="https://formspree.io/f/xdappooz" method="POST">
-  <input type="text" name="name" placeholder="Your name" required>
-  <input type="email" name="email" placeholder="your@email.com" required>
-  <textarea name="message" placeholder="Message" required></textarea>
-  <button type="submit">Send</button>
-</form>
+      <form class="contact-form reveal delay-2" action="https://formspree.io/f/xdappooz" method="POST">
+        <div class="form-row">
+          <label for="name" data-i18n="contact.form.name">Your name</label>
+          <input type="text" id="name" name="name" data-i18n-placeholder="contact.form.name_ph" placeholder="Full name" required />
+        </div>
+        <div class="form-row">
+          <label for="email" data-i18n="contact.form.email">Email</label>
+          <input type="email" id="email" name="email" data-i18n-placeholder="contact.form.email_ph" placeholder="your@email.com" required />
+        </div>
+        <div class="form-row">
+          <label for="message" data-i18n="contact.form.message">Message</label>
+          <textarea id="message" name="message" rows="5" data-i18n-placeholder="contact.form.message_ph" placeholder="What would you like to explore?" required></textarea>
+        </div>
+        <button type="submit" class="btn-submit" data-i18n="contact.form.submit">Send message</button>
+      </form>
 
     </div>
   </section>
-
   <!-- ─── FOOTER ─── -->
   <footer class="site-footer">
     <div class="container footer-inner">
