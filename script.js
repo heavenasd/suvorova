@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
       'services.tag.selfpaced':  'Self-paced',
 
       'contact.label':           '06 — Contact',
-      'contact.heading':         'Let\'s talk<br><em>about your life.</em>',
+      'contact.heading':         'Let’s talk<br><em>ABOUT YOUR PATH TO OPENING A PRESCHOOL.</em>',
       'contact.subtext':         'Fill in the form or reach out directly on social media. I read every message.',
       'contact.form.name':       'Your name',
       'contact.form.name_ph':    'Full name',
@@ -193,7 +193,7 @@ document.addEventListener('DOMContentLoaded', () => {
       'services.tag.selfpaced':  'Самостійно',
 
       'contact.label':           '06 — Контакт',
-      'contact.heading':         'Поговоримо<br><em>про твоє життя.</em>',
+      'contact.heading':         'Поговоримо<br><em>ПРО ТВІЙ ШЛЯХ ДО ВІДКРИТТЯ САДКА.</em>',
       'contact.subtext':         'Заповни форму або напиши мені в соцмережах. Я читаю кожне повідомлення.',
       'contact.form.name':       'Твоє ім\'я',
       'contact.form.name_ph':    'Повне ім\'я',
